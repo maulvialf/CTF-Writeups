@@ -615,16 +615,24 @@ After analyze the code, we know few things
 1. This functions (we name firstchalls) is call first. Functions get parameter that we input, and call functions e that encrypt the character. And compare with variable "_". 
 
 ![](Pasted%20image%2020211011201825.png)
+
 ![](Pasted%20image%2020211011201954.png)
+
 2. There some AES encryption used to encrypt the input. There are sbox constant and rcon constant in the execution.
+
 ![](Pasted%20image%2020211011202101.png)
+
 ![](Pasted%20image%2020211011202156.png)
 
 3. Our input somehow processed as AES ECB encrypted. Our input is encrypted each 16 bytes block. 
+
+
 ![](Pasted%20image%2020211011202409.png)
-Block 1 and Block 2 output same. Because our input on block1 and block2 is all "A"  bytes
+
+   Block 1 and Block 2 output same. Because our input on block1 and block2 is all "A"  bytes
 
 4. We know that for AES ECB encryption we need keys. Keys defined in this variable
+
 ![](Pasted%20image%2020211011202557.png)
 
 5. Keysize is 24 bytes, is indicate AES used is 192 bytes.
@@ -1459,11 +1467,6 @@ class AES:
             nonce = inc_bytes(nonce)
 
         return b''.join(blocks)
-
-
-import os
-from hashlib import pbkdf2_hmac
-from hmac import new as new_hmac, compare_digest
 
 
 ciphertext = [0xf4, 0x39, 0xd1, 0xc0, 0x55, 0x84, 0x36, 0x28, 0xd7, 0x2a, 0xb9, 0x93, 0x2a, 0x18, 0xb1, 0x72, 0x6c, 0xcd, 0xcf, 0x4b, 0xd4, 0x4c, 0x7d, 0xe4, 0xab, 0xf0, 0x23, 0x53, 0x24, 0x5c, 0x2a, 0x42, 0xf8, 0x0e, 0x26, 0xfc, 0xd4, 0x5c, 0xc1, 0x71, 0xef, 0xa9, 0x82, 0x3d, 0x7b, 0x49, 0xa2, 0xdc]
