@@ -38,4 +38,4 @@ p.sendline(pload)
 p.interactive()
 ```
 
-![[Pasted image 20211011092523.png]]
+![](Pasted%20image%2020211011130108.png)

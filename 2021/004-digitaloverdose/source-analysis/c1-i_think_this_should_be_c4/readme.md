@@ -4,8 +4,8 @@ Breakpoint on the anonymous functions to analyse encryption function. Analysis a
 
 
 ## Complete write up
+Access the 
 
-To do 
 
 ## Solution
 ```python
@@ -475,4 +475,4 @@ DO{Y0UVE_JU$T_D34LT_W1TH_AES-ECB}
 ```
 
 
-![[Pasted image 20211011091749.png]]
+![](Pasted%20image%2020211011130141.png)

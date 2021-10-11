@@ -2,7 +2,8 @@
 ## TLDR
 Decode All Fp pointer var
 
-![[Pasted image 20211011092838.png]]
+
+![](Pasted%20image%2020211011130120.png)
 
 ## Complete write up
 To do soon

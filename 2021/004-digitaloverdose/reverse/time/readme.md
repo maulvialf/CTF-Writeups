@@ -1,6 +1,6 @@
 # Time
 ## TLDR
-Replicate decrypt function on the python. Brute time seed on 21 february according to the description
+Replicate decrypt function on the python. Brute time seed on 21 february according to the description.
 
 ## Complete write up
 To do soon
@@ -55,6 +55,8 @@ for i in tqdm(range(1612153254, 1615263654)):
     if("DO{" == decipher[0:3]):
         print decipher, pwd
         break
-# true seed
+
+
+# True seed
 # 1613606400
 ```
