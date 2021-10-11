@@ -6,6 +6,8 @@ Breakpoint on the anonymous functions to analyse encryption function. Analysis a
 ## Complete write up
 Access the Site, there are some form that validate the input. 
 ![](Pasted%20image%2020211011195807.png)
+
+
 If input wrong there are input nope with red color font.
 
 ![](Pasted%20image%2020211011195946.png)
@@ -611,6 +613,7 @@ Now we try to analyse what the validation check happened.
 After analyze the code, we know few things
 
 1. This functions (we name firstchalls) is call first. Functions get parameter that we input, and call functions e that encrypt the character. And compare with variable "_". 
+
 ![](Pasted%20image%2020211011201825.png)
 ![](Pasted%20image%2020211011201954.png)
 2. There some AES encryption used to encrypt the input. There are sbox constant and rcon constant in the execution.
@@ -1006,6 +1009,7 @@ for i in range(0, len(ciphertext), 16):
     print (aes.decrypt_block(ciphertext_block))
 ```
 ![](Pasted%20image%2020211011210414.png)
+
 And flag acquired
 
 ## Solution
