@@ -47,7 +47,6 @@ pload = "print_r"
 
 
 hasil = kotak1 + kotak2 + kotak3 + kotak4 + kotak5 + kotak6
-print hasil.replace("\n", "")
 
 a = ""
 b = ""
