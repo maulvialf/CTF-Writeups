@@ -1,3 +1,4 @@
+# yara bytecode extract
 x = """\
 000000 3c00f03c 5f 3c 39 07 64 2 f0f
 000000 3c01f03c 33 3c 5f 07 64 012 f0f
@@ -28,6 +29,7 @@ x = """\
 """
 x = x.split("\n")
 flag = ""
+# xor the operand
 for i in x:
 	item1 = i.split("f03c ")[1].split(" 3c")[0]
 	item2 = i.split(" 3c ")[1].split(" 07")[0]
