@@ -1,0 +1,1 @@
+open in ida. copy. paste
