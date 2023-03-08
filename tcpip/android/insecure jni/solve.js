@@ -1,5 +1,5 @@
 // frida  -U -f  id.aimardcr.insecure_jni -l solve.js
-
+// only work on 64bit arm devices. change offset if using on emulator or arm32
 Java.perform(function () {
     aWaitingLoadLibrarys();
 });
