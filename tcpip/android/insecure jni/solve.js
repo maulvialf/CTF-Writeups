@@ -42,7 +42,6 @@ function aWaitingLoadLibrarys() {
                 
                     // @ts-ignore
                     var base = Module.findBaseAddress("libapp.so");
-                    // TCP1P{JNI_1s_a_VT4bl3_aLL_al0ng?!?!}                    
                     // Attach to the target process
 
                     // Find the address of the native function
