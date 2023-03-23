@@ -1,3 +1,13 @@
-# Needle Haystasck
+# Hunting License
 
-f
+Decompile
+XOR
+Submit
+
+```
+PasswordNumeroUno
+
+P4ssw0rdTw0
+
+ThirdAndFinal!!!
+```
