@@ -4,7 +4,7 @@ Using https://github.com/Perfare/Il2CppDumper
 
 Provide ill2cpp.so and global-metada
 
-File below as would generated from the server
+File below would generated inside directory
 
 1. ill2cpp.h
 2. script.json
