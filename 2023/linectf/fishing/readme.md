@@ -1,3 +1,3 @@
 # Fishing
 
-Soon
+Bruteforce on qmemcmp with frida + python
