@@ -46,7 +46,6 @@ one = 0
 # gdb.execute("b *0x00005555555555FF")
 # gdb.execute("b *0x0000555555555409")
 kamus = dict()
-babi = dict()
 
 gdb.execute("file vm")
 
