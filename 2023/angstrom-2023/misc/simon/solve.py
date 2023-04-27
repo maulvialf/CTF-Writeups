@@ -1,3 +1,4 @@
+# run on the vps to beat connection limit :)
 from pwn import *
 
 p = connect("challs.actf.co", 31402)

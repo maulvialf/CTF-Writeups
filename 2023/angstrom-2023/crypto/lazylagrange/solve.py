@@ -1,3 +1,8 @@
+# send 128 on query 1 to make sure polinom result result is on format base128 (7 bit)
+# then we can convert it to ascii
+# and used on query2 to return flag position
+# and reposisition the flag
+# thanks to deomkicer on part 1
 from pwn import *
 
 def query1(num):
