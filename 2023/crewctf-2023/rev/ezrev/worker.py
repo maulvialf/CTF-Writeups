@@ -52,9 +52,6 @@ def extract_memory(address, num_bytes):
         byte = int(byte_str, 16)
         byte_array.append(byte)
 
-    # Save the output to a log file
-    # gdb.execute("quit", to_string=True)
-
     return byte_array
 
 gdb.execute("del")

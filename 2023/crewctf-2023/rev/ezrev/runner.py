@@ -6,10 +6,6 @@ from threading import Thread
 from queue import Queue
 from subprocess import check_output
 
-# nyoba
-# for i in range(0, 10):
-# asli
-
 workersctemplate = open("worker.py").read()
 def worker(y):
     while not passwords.empty():
@@ -17,7 +13,6 @@ def worker(y):
         ch = password[1]
         x = password[2]
         password = password[0]
-        # pload = check_output(["gdb", "--batch", "-ex", "py arg0={};".format(password), "-x", "template.py"]).decode('utf8')
         workersc = workersctemplate
         workersc = workersc.replace("INPUTHERE", password) 
         workersc = workersc.replace("LOOPHERE", str(x)) 
@@ -44,7 +39,7 @@ def worker(y):
 threads = []
 import string
 
-flag = "crewctf{well_i_didnt_know_rop_can_be_so_obnoxious_especially_for_rever_but_if_you_can_find_this_you_are_a_god_reve"
+flag = "crewctf{well_i_didnt_know_rop_can_be_so_obnoxious_especially_for_rever_but_if_you_can_find_this_you_are_a_god_rever}"
 brute = string.ascii_letters + "_{}" + string.digits + string.punctuation
 brute = brute.replace("\"", "")
 brute = brute.replace("\\", "")
